@@ -14,5 +14,17 @@
             <ColumnDefinition Width="33*"/>
         </Grid.ColumnDefinitions>
 
+
+        <ListView Margin="0,0,259,0" ItemsSource="{Binding Musteriler}" Grid.ColumnSpan="3">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding MusteriAdi}" Header="Müşteri Adı" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding MusteriSoyadi}" Header="Müşteri Soyadı" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding MusteriTel}" Header="Telefon Numarası" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding MusteriEposta}" Header="Eposta Adresi" Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
     </Grid>
 </Window>

@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using MusteriTakipUygulaması.Model;
+using MusteriTakipUygulaması.ViewModel;
 
 namespace MusteriTakipUygulaması.View
 {
@@ -22,12 +22,9 @@ namespace MusteriTakipUygulaması.View
     {
         public AnaSayfa_Musteriler()
         {
-            InitializeComponent();
-            MusteriDataAccess MDA = new MusteriDataAccess();
-            MDA.MusteriGetir();
+            //InitializeComponent(); hata veriyor?
+            DataContext = new MusteriViewModel();
 
         }
-
-
     }
 }
